@@ -1,6 +1,6 @@
 import { Client, Collection } from "discord.js";
 
-import { TOKEN } from './config.js';
+import { TOKEN } from './utils/config.js';
 
 const CLIENT = new Client({ intents: 1 });
 
