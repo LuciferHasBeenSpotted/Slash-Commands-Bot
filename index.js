@@ -1,11 +1,10 @@
-import { Client, Collection } from "discord.js";
+import { Client } from "discord.js";
 
 import { TOKEN } from './utils/config.js';
+import eventLoader from './utils/loaders/eventLoader';
 
 const CLIENT = new Client({ intents: 1 });
 
-["commands", 'cooldown'].forEach(x => CLIENT[x] = new Collection);
+eventLoader(CLIENT);
 
-
-
-CLIENT.login(TOKEN)
+CLIENT.login(TOKEN);
